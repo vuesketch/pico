@@ -19,7 +19,7 @@
   </a>
 </p>
 
-Pico is a browser-based Computer Science learning tool with four workspaces: Pseudocode Compiler, Python Compiler, Flowchart Builder and Logic Sim. Themes are shared across workspaces. Projects are stored in your browser. No account is required.
+Pico is a browser-based Computer Science learning tool with workspaces for pseudocode, Python, flowcharts, logic circuits and bug-solving practice. Themes are shared across workspaces. Projects are stored in your browser. No account is required.
 
 Developed by **Amar** (11 Boys Blue), deployed by **Mustaqim** (11 Boys Red), with **Logic Sim conceptualised by Mohamed Hamza** (11 Boys Red).
 
@@ -50,6 +50,7 @@ When execution reaches `INPUT`, type your value in the Console and press Enter. 
 | Feature | What it does |
 | --- | --- |
 | **Editor** | A 19px default font, syntax colouring, declared-name autocomplete, indentation guides, folding, search and keyword documentation. |
+| **Bug Solving** | Fix Python bugs with progressive hints, automated tests and explanations. Drafts and progress save in this browser. |
 | **Console** | Accepts input while the program waits. Keeps output and submitted values in order, with fatal errors shown in red. |
 | **Debugger** | Replays recorded execution steps with variable values and output. |
 | **Flowchart Builder** | Drag editable blocks onto a canvas, connect branches and loops, run with typed console input, and convert to pseudocode. |

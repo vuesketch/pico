@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Bug } from 'lucide-react';
 import { loadSettings } from '../../storage/settings';
 import type { CompilerLanguage } from '../../storage/projects';
 import { cssVariables, getTheme } from '../themes';
@@ -16,7 +17,7 @@ export function Credits({ logic = false }: { logic?: boolean } = {}) {
     <span className="credit-item"><span>Made by</span> <strong>Amar</strong> <small>11 Boys Blue</small></span>
   </div>;
 }
-export function HomeScreen({ onChoose }: { onChoose: (language: CompilerLanguage | 'flowchart' | 'logic') => void }) {
+export function HomeScreen({ onChoose }: { onChoose: (language: CompilerLanguage | 'flowchart' | 'logic' | 'bugs') => void }) {
   const [settings] = useState(loadSettings);
   const theme = getTheme(settings.theme);
   useEffect(() => {
@@ -41,6 +42,13 @@ export function HomeScreen({ onChoose }: { onChoose: (language: CompilerLanguage
         <p>Run Python with console input and a debugger.</p>
         </div>
         <pre className="compiler-choice-preview" aria-hidden="true"><HighlightedCode language="python" code={'name = input("Enter your name: ")\nprint(f"Hello {name}!")'} /></pre>
+      </button>
+      <button className="compiler-choice" onClick={() => onChoose('bugs')}>
+        <div className="compiler-choice-copy">
+          <div className="compiler-choice-title"><h2>Bug Solving</h2><span><Bug size={15} aria-hidden="true" /> Practice</span></div>
+          <p>Find bugs, fix Python code, and check your solution with tests.</p>
+        </div>
+        <div className="compiler-choice-preview home-bug-preview" aria-hidden="true"><code><span>def</span> total(numbers):<br />&nbsp;&nbsp;&nbsp;&nbsp;result = <b>1</b><br />&nbsp;&nbsp;&nbsp;&nbsp;return result</code><span className="home-bug-mark">?</span></div>
       </button>
       <button className="compiler-choice" onClick={() => onChoose('flowchart')}>
         <div className="compiler-choice-copy">
